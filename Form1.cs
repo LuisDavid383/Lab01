@@ -67,6 +67,16 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             epUsuario.SetError(txtMaterno, "");
 
 
+            //Verificar el tipo de documento
+            if (string.IsNullOrEmpty(cmb_Tipo_Documento.Text))
+            {
+                epUsuario.SetError(cmb_Tipo_Documento, "Debe ingresar el tipo de documento");
+                cmb_Tipo_Documento.Focus();
+                return;
+            }
+            epUsuario.SetError(cmb_Tipo_Documento, "");
+
+
             //Verificar que el documento no este vacio
             if (string.IsNullOrEmpty(txt_Num_Documento.Text))
             {
@@ -106,15 +116,19 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             epUsuario.SetError(txtDireccion, "");
 
 
-
             ObjUsuario.codigo = txtCodigo.Text;
             ObjUsuario.nombre = txtNombre.Text;
             ObjUsuario.apellidoPaterno = txtPaterno.Text;
             ObjUsuario.apellidoMaterno = txtMaterno.Text;
+            ObjUsuario.tipo_documento = cmb_Tipo_Documento.Text;
+            ObjUsuario.num_documento = txt_Num_Documento.Text;
+            ObjUsuario.celular = txtCelular.Text;
+            ObjUsuario.email = txtEmail.Text;
+            ObjUsuario.direccion = txtDireccion.Text;
 
             aDatosUsuario.Add(ObjUsuario);
 
-            dgvUsuario.Rows.Add(ObjUsuario.codigo, ObjUsuario.nombre, ObjUsuario.apellidoPaterno, ObjUsuario.apellidoMaterno);
+            dgvUsuario.Rows.Add(ObjUsuario.codigo, ObjUsuario.nombre, ObjUsuario.apellidoPaterno, ObjUsuario.apellidoMaterno, ObjUsuario.tipo_documento, ObjUsuario.num_documento, ObjUsuario.celular, ObjUsuario.email, ObjUsuario.direccion);
 
             mtd_Limpiar_Campos();
         }
@@ -125,6 +139,10 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             txtNombre.Text = string.Empty;
             txtPaterno.Text = string.Empty;
             txtMaterno.Text = string.Empty;
+            txt_Num_Documento.Text = string.Empty;
+            txtCelular.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
