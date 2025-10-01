@@ -32,11 +32,11 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gpbDatos = new System.Windows.Forms.GroupBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtCelular = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
             this.txt_Num_Documento = new System.Windows.Forms.TextBox();
             this.lbl_Num_Documento = new System.Windows.Forms.Label();
             this.cmb_Tipo_Documento = new System.Windows.Forms.ComboBox();
@@ -78,11 +78,11 @@
             // gpbDatos
             // 
             this.gpbDatos.Controls.Add(this.txtDireccion);
-            this.gpbDatos.Controls.Add(this.label9);
+            this.gpbDatos.Controls.Add(this.lblDireccion);
             this.gpbDatos.Controls.Add(this.txtEmail);
-            this.gpbDatos.Controls.Add(this.label8);
+            this.gpbDatos.Controls.Add(this.lblEmail);
             this.gpbDatos.Controls.Add(this.txtCelular);
-            this.gpbDatos.Controls.Add(this.label7);
+            this.gpbDatos.Controls.Add(this.lblCelular);
             this.gpbDatos.Controls.Add(this.txt_Num_Documento);
             this.gpbDatos.Controls.Add(this.lbl_Num_Documento);
             this.gpbDatos.Controls.Add(this.cmb_Tipo_Documento);
@@ -109,14 +109,14 @@
             this.txtDireccion.Size = new System.Drawing.Size(580, 20);
             this.txtDireccion.TabIndex = 17;
             // 
-            // label9
+            // lblDireccion
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 215);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "DIRECCION";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(22, 215);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(66, 13);
+            this.lblDireccion.TabIndex = 16;
+            this.lblDireccion.Text = "DIRECCION";
             // 
             // txtEmail
             // 
@@ -125,14 +125,14 @@
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 15;
             // 
-            // label8
+            // lblEmail
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(204, 165);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "E-MAIL";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(204, 165);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 13);
+            this.lblEmail.TabIndex = 14;
+            this.lblEmail.Text = "E-MAIL";
             // 
             // txtCelular
             // 
@@ -141,14 +141,14 @@
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
             this.txtCelular.TabIndex = 13;
             // 
-            // label7
+            // lblCelular
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "CELULAR";
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Location = new System.Drawing.Point(22, 165);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(56, 13);
+            this.lblCelular.TabIndex = 12;
+            this.lblCelular.Text = "CELULAR";
             // 
             // txt_Num_Documento
             // 
@@ -387,11 +387,11 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvUsuario;

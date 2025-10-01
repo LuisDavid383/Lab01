@@ -35,6 +35,33 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtCodigo, "");
 
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                epUsuario.SetError(txtNombre, "Debe ingresar el nombre del usuario");
+                txtNombre.Focus();
+                return;
+            }
+            epUsuario.SetError(txtNombre, "");
+
+            if (string.IsNullOrEmpty(txtPaterno.Text))
+            {
+                epUsuario.SetError(txtPaterno, "Debe ingresar el Apellido Paterno");
+                txtPaterno.Focus();
+                return;
+            }
+            epUsuario.SetError(txtPaterno, "");
+
+            if (string.IsNullOrEmpty(txtMaterno.Text))
+            {
+                epUsuario.SetError(txtMaterno, "Debe ingresar el Apellido Materno");
+                txtMaterno.Focus();
+                return;
+            }
+            epUsuario.SetError(txtMaterno, "");
+
+
+
+
             ObjUsuario.codigo = txtCodigo.Text;
             ObjUsuario.nombre = txtNombre.Text;
             ObjUsuario.apellidoPaterno = txtPaterno.Text;
