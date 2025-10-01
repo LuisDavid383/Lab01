@@ -52,14 +52,19 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colApelidoPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colApellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.epUsuario = new System.Windows.Forms.ErrorProvider(this.components);
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApelidoPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Tipo_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Num_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epUsuario)).BeginInit();
@@ -281,37 +286,18 @@
             this.colCodigo,
             this.colNombre,
             this.colApelidoPaterno,
-            this.colApellidoMaterno});
+            this.colApellidoMaterno,
+            this.col_Tipo_Documento,
+            this.col_Num_Documento,
+            this.colCelular,
+            this.colEmail,
+            this.colDireccion});
             this.dgvUsuario.Location = new System.Drawing.Point(12, 385);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.Size = new System.Drawing.Size(626, 107);
             this.dgvUsuario.TabIndex = 4;
             this.dgvUsuario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentDoubleClick);
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.ReadOnly = true;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.ReadOnly = true;
-            // 
-            // colApelidoPaterno
-            // 
-            this.colApelidoPaterno.HeaderText = "Apellido Paterno";
-            this.colApelidoPaterno.Name = "colApelidoPaterno";
-            this.colApelidoPaterno.ReadOnly = true;
-            // 
-            // colApellidoMaterno
-            // 
-            this.colApellidoMaterno.HeaderText = "Apellido Materno";
-            this.colApellidoMaterno.Name = "colApellidoMaterno";
-            this.colApellidoMaterno.ReadOnly = true;
             // 
             // btnGuardar
             // 
@@ -345,6 +331,60 @@
             // epUsuario
             // 
             this.epUsuario.ContainerControl = this;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            // 
+            // colApelidoPaterno
+            // 
+            this.colApelidoPaterno.HeaderText = "Apellido Paterno";
+            this.colApelidoPaterno.Name = "colApelidoPaterno";
+            this.colApelidoPaterno.ReadOnly = true;
+            // 
+            // colApellidoMaterno
+            // 
+            this.colApellidoMaterno.HeaderText = "Apellido Materno";
+            this.colApellidoMaterno.Name = "colApellidoMaterno";
+            this.colApellidoMaterno.ReadOnly = true;
+            // 
+            // col_Tipo_Documento
+            // 
+            this.col_Tipo_Documento.HeaderText = "Tipo de Documento";
+            this.col_Tipo_Documento.Name = "col_Tipo_Documento";
+            this.col_Tipo_Documento.ReadOnly = true;
+            // 
+            // col_Num_Documento
+            // 
+            this.col_Num_Documento.HeaderText = "Numero de Documento";
+            this.col_Num_Documento.Name = "col_Num_Documento";
+            this.col_Num_Documento.ReadOnly = true;
+            // 
+            // colCelular
+            // 
+            this.colCelular.HeaderText = "Celular";
+            this.colCelular.Name = "colCelular";
+            this.colCelular.ReadOnly = true;
+            // 
+            // colEmail
+            // 
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            // 
+            // colDireccion
+            // 
+            this.colDireccion.HeaderText = "Direccion";
+            this.colDireccion.Name = "colDireccion";
+            this.colDireccion.ReadOnly = true;
             // 
             // Form1
             // 
@@ -398,11 +438,16 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ErrorProvider epUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApelidoPaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellidoMaterno;
-        private System.Windows.Forms.ErrorProvider epUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Tipo_Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_Num_Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCelular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDireccion;
     }
 }
 

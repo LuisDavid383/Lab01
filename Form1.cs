@@ -27,6 +27,7 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //Verificar que el codigo no este vacio
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 epUsuario.SetError(txtCodigo, "Debe ingresar el codigo");
@@ -35,6 +36,8 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtCodigo, "");
 
+
+            //Verificar que el nombre no este vacio
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 epUsuario.SetError(txtNombre, "Debe ingresar el nombre del usuario");
@@ -43,6 +46,8 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtNombre, "");
 
+
+            //Verificar que el paterno no este vacio+
             if (string.IsNullOrEmpty(txtPaterno.Text))
             {
                 epUsuario.SetError(txtPaterno, "Debe ingresar el Apellido Paterno");
@@ -51,6 +56,8 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtPaterno, "");
 
+
+            //Verificar que el materno no este vacio
             if (string.IsNullOrEmpty(txtMaterno.Text))
             {
                 epUsuario.SetError(txtMaterno, "Debe ingresar el Apellido Materno");
@@ -59,6 +66,44 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtMaterno, "");
 
+
+            //Verificar que el documento no este vacio
+            if (string.IsNullOrEmpty(txt_Num_Documento.Text))
+            {
+                epUsuario.SetError(txt_Num_Documento, "Debe ingresar el numero de documento");
+                txt_Num_Documento.Focus();
+                return;
+            }
+            epUsuario.SetError(txt_Num_Documento, "");
+
+
+            //Verificar que el celular no este vacio
+            if (string.IsNullOrEmpty(txtCelular.Text))
+            {
+                epUsuario.SetError(txtCelular, "Debe ingresar el número de celular");
+                txtCelular.Focus();
+                return;
+            }
+            epUsuario.SetError(txtCelular, "");
+
+
+            //Verificar que el email no este vacio
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                epUsuario.SetError(txtEmail, "Debe ingresar el email");
+                txtEmail.Focus();
+                return;
+            }
+            epUsuario.SetError(txtEmail, "");
+
+            //Verificar que la direccion no este vacio
+            if (string.IsNullOrEmpty(txtDireccion.Text))
+            {
+                epUsuario.SetError(txtDireccion, "Debe ingresar la dirección");
+                txtDireccion.Focus();
+                return;
+            }
+            epUsuario.SetError(txtDireccion, "");
 
 
 
