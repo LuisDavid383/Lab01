@@ -38,15 +38,15 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_Num_Documento = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_Num_Documento = new System.Windows.Forms.Label();
             this.cmb_Tipo_Documento = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_Tipo_Documento = new System.Windows.Forms.Label();
             this.txtMaterno = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblMaterno = new System.Windows.Forms.Label();
             this.txtPaterno = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPaterno = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombres = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -84,15 +84,15 @@
             this.gpbDatos.Controls.Add(this.txtCelular);
             this.gpbDatos.Controls.Add(this.label7);
             this.gpbDatos.Controls.Add(this.txt_Num_Documento);
-            this.gpbDatos.Controls.Add(this.label6);
+            this.gpbDatos.Controls.Add(this.lbl_Num_Documento);
             this.gpbDatos.Controls.Add(this.cmb_Tipo_Documento);
-            this.gpbDatos.Controls.Add(this.label5);
+            this.gpbDatos.Controls.Add(this.lbl_Tipo_Documento);
             this.gpbDatos.Controls.Add(this.txtMaterno);
-            this.gpbDatos.Controls.Add(this.label4);
+            this.gpbDatos.Controls.Add(this.lblMaterno);
             this.gpbDatos.Controls.Add(this.txtPaterno);
-            this.gpbDatos.Controls.Add(this.label3);
+            this.gpbDatos.Controls.Add(this.lblPaterno);
             this.gpbDatos.Controls.Add(this.txtNombre);
-            this.gpbDatos.Controls.Add(this.label1);
+            this.gpbDatos.Controls.Add(this.lblNombres);
             this.gpbDatos.Controls.Add(this.txtCodigo);
             this.gpbDatos.Controls.Add(this.lblCodigo);
             this.gpbDatos.Location = new System.Drawing.Point(12, 61);
@@ -157,17 +157,18 @@
             this.txt_Num_Documento.Size = new System.Drawing.Size(100, 20);
             this.txt_Num_Documento.TabIndex = 11;
             // 
-            // label6
+            // lbl_Num_Documento
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(203, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "NUMERO DOCUMENTO";
+            this.lbl_Num_Documento.AutoSize = true;
+            this.lbl_Num_Documento.Location = new System.Drawing.Point(203, 114);
+            this.lbl_Num_Documento.Name = "lbl_Num_Documento";
+            this.lbl_Num_Documento.Size = new System.Drawing.Size(146, 13);
+            this.lbl_Num_Documento.TabIndex = 10;
+            this.lbl_Num_Documento.Text = "NUMERO DE DOCUMENTO";
             // 
             // cmb_Tipo_Documento
             // 
+            this.cmb_Tipo_Documento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Tipo_Documento.FormattingEnabled = true;
             this.cmb_Tipo_Documento.Items.AddRange(new object[] {
             "DNI",
@@ -178,14 +179,14 @@
             this.cmb_Tipo_Documento.Size = new System.Drawing.Size(121, 21);
             this.cmb_Tipo_Documento.TabIndex = 9;
             // 
-            // label5
+            // lbl_Tipo_Documento
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "TIPO DE DOCUMENTO";
+            this.lbl_Tipo_Documento.AutoSize = true;
+            this.lbl_Tipo_Documento.Location = new System.Drawing.Point(22, 114);
+            this.lbl_Tipo_Documento.Name = "lbl_Tipo_Documento";
+            this.lbl_Tipo_Documento.Size = new System.Drawing.Size(123, 13);
+            this.lbl_Tipo_Documento.TabIndex = 8;
+            this.lbl_Tipo_Documento.Text = "TIPO DE DOCUMENTO";
             // 
             // txtMaterno
             // 
@@ -194,14 +195,14 @@
             this.txtMaterno.Size = new System.Drawing.Size(152, 20);
             this.txtMaterno.TabIndex = 7;
             // 
-            // label4
+            // lblMaterno
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(382, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "APELLIDO MATERNO";
+            this.lblMaterno.AutoSize = true;
+            this.lblMaterno.Location = new System.Drawing.Point(382, 59);
+            this.lblMaterno.Name = "lblMaterno";
+            this.lblMaterno.Size = new System.Drawing.Size(116, 13);
+            this.lblMaterno.TabIndex = 6;
+            this.lblMaterno.Text = "APELLIDO MATERNO";
             // 
             // txtPaterno
             // 
@@ -210,14 +211,14 @@
             this.txtPaterno.Size = new System.Drawing.Size(152, 20);
             this.txtPaterno.TabIndex = 5;
             // 
-            // label3
+            // lblPaterno
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "APELLIDO PATERNO";
+            this.lblPaterno.AutoSize = true;
+            this.lblPaterno.Location = new System.Drawing.Point(203, 59);
+            this.lblPaterno.Name = "lblPaterno";
+            this.lblPaterno.Size = new System.Drawing.Size(114, 13);
+            this.lblPaterno.TabIndex = 4;
+            this.lblPaterno.Text = "APELLIDO PATERNO";
             // 
             // txtNombre
             // 
@@ -226,14 +227,14 @@
             this.txtNombre.Size = new System.Drawing.Size(152, 20);
             this.txtNombre.TabIndex = 3;
             // 
-            // label1
+            // lblNombres
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "NOMBRES";
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Location = new System.Drawing.Point(22, 59);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(61, 13);
+            this.lblNombres.TabIndex = 2;
+            this.lblNombres.Text = "NOMBRES";
             // 
             // txtCodigo
             // 
@@ -376,15 +377,15 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txt_Num_Documento;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_Num_Documento;
         private System.Windows.Forms.ComboBox cmb_Tipo_Documento;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_Tipo_Documento;
         private System.Windows.Forms.TextBox txtMaterno;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMaterno;
         private System.Windows.Forms.TextBox txtPaterno;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPaterno;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCelular;
