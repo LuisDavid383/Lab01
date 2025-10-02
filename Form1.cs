@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PG02__LAB01_FICHEROS_LUIS_MOSQUITO.Clases;
@@ -23,11 +24,30 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
         public Form1()
         {
             InitializeComponent();
+            txt_Num_Documento.Enabled = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //Verificar que el codigo no este vacio
+            //CASO EN QUE TODOS LOS VALORES ESTEN VACIOS
+            if (string.IsNullOrEmpty(txtCodigo.Text) &&
+                string.IsNullOrEmpty(txtNombre.Text) &&
+                string.IsNullOrEmpty(txtPaterno.Text) &&
+                string.IsNullOrEmpty(txtMaterno.Text) &&
+                string.IsNullOrEmpty(cmb_Tipo_Documento.Text) &&
+                string.IsNullOrEmpty(txt_Num_Documento.Text) &&
+                string.IsNullOrEmpty(txtCelular.Text) &&
+                string.IsNullOrEmpty(txtEmail.Text) &&
+                string.IsNullOrEmpty(txtDireccion.Text))
+            {
+                MessageBox.Show("No puede dejar ningun elemento vacio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            //VERIFICAR CADA ELEMENTO PARA QUE SE INGRESEN VALORES CORRECTOS
+
+
+            //VERIFICAR EN EL TEXBOX CODIGO
+            //VERIFICAR QUE EL CAMPO CODIGO NO ESTE VACIO
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 epUsuario.SetError(txtCodigo, "Debe ingresar el codigo");
@@ -36,8 +56,19 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtCodigo, "");
 
+            //VERIFICAR QUE SE INGRESEN SOLO VALORES NUMERICOS
+            if (!Regex.IsMatch(txtCodigo.Text, "^[0-9]*$"))
+            {
+                epUsuario.SetError(txtCodigo, "Solo puede ingresar valores numericos");
+                txtCodigo.Focus();
+                return;
+            }
+            epUsuario.SetError(txtCodigo, "");
 
-            //Verificar que el nombre no este vacio
+
+
+            //VERIFICAR EN EL TEXBOX NOMBRE
+            //VERIFICAR QUE EL CAMPO NOMBRE NO ESTE VACIO
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 epUsuario.SetError(txtNombre, "Debe ingresar el nombre del usuario");
@@ -46,8 +77,19 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtNombre, "");
 
+            //VERIFICAR QUE SE INGRESEN SOLO VALORES ALFABETICOS
+            if (!Regex.IsMatch(txtNombre.Text, "^[A-Za-z ]*$"))
+            {
+                epUsuario.SetError(txtNombre, "Solo puede ingresar valores alfabeticos");
+                txtNombre.Focus();
+                return;
+            }
+            epUsuario.SetError(txtNombre, "");
 
-            //Verificar que el paterno no este vacio+
+
+
+            //VERIFICAR EL TEXBOX APELLIDO PATERNO
+            //VERIFICAR QUE EL CAMPO APELLIDO PATERNO NO ESTE VACIO
             if (string.IsNullOrEmpty(txtPaterno.Text))
             {
                 epUsuario.SetError(txtPaterno, "Debe ingresar el Apellido Paterno");
@@ -56,8 +98,19 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtPaterno, "");
 
+            //VERIFICAR QUE SE INGRESE SOLO VALORES ALFANUMERICOS
+            if (!Regex.IsMatch(txtPaterno.Text, "^[A-Za-z]*$"))
+            {
+                epUsuario.SetError(txtPaterno, "Solo puede ingresar valores alfabeticos");
+                txtPaterno.Focus();
+                return;
+            }
+            epUsuario.SetError(txtPaterno, "");
 
-            //Verificar que el materno no este vacio
+
+
+            //VERIFICAR EL TEXBOX APELLIDO MATERNO
+            //VERIFICAR QUE EL CAMPO APELLIDO MATERNO NO ESTE VACIO
             if (string.IsNullOrEmpty(txtMaterno.Text))
             {
                 epUsuario.SetError(txtMaterno, "Debe ingresar el Apellido Materno");
@@ -66,8 +119,19 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtMaterno, "");
 
+            //VERIFICAR QUE SE INGRESE SOLO VALORES ALFANUMERICOS
+            if (!Regex.IsMatch(txtMaterno.Text, "^[A-Za-z]*$"))
+            {
+                epUsuario.SetError(txtMaterno, "Solo puede ingresar valores alfabeticos");
+                txtPaterno.Focus();
+                return;
+            }
+            epUsuario.SetError(txtMaterno, "");
 
-            //Verificar el tipo de documento
+
+
+            //VERIFICAR EL COMBOBOX TIPO DE DOCUMENTO
+            //VERIFICAR QUE EL COMBO BOX TIPO DE DOCUMENTO NO ESTE VACIO
             if (string.IsNullOrEmpty(cmb_Tipo_Documento.Text))
             {
                 epUsuario.SetError(cmb_Tipo_Documento, "Debe ingresar el tipo de documento");
@@ -76,8 +140,15 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(cmb_Tipo_Documento, "");
 
+            if (cmb_Tipo_Documento.SelectedIndex != -1)
+            {
+                txt_Num_Documento.Enabled = true;
+            }
 
-            //Verificar que el documento no este vacio
+
+
+            //VERIFICAR EL TEXTBOX NUMERO DE DOCUMENTO
+            //VERIFICAR QUE EL CAMPO NUMERO DE DOCUMENTO NO ESTE VACIO
             if (string.IsNullOrEmpty(txt_Num_Documento.Text))
             {
                 epUsuario.SetError(txt_Num_Documento, "Debe ingresar el numero de documento");
@@ -218,6 +289,11 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
                 Console.WriteLine(e.ToString());
                 MessageBox.Show("error");
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

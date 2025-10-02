@@ -28,7 +28,7 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
                 string a = txtusuario.Text;
                 string b = txtpassword.Text;
 
-                Form1 mDI_Principal = new Form1();
+                Man mDI_Principal = new Man();
                 mDI_Principal.Show();
 
             }

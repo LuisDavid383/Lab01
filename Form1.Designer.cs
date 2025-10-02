@@ -52,10 +52,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.epUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colApelidoPaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +61,10 @@
             this.colCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.epUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.gpbDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epUsuario)).BeginInit();
@@ -125,7 +125,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(207, 181);
+            this.txtEmail.Location = new System.Drawing.Point(306, 181);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 15;
@@ -133,7 +133,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(204, 165);
+            this.lblEmail.Location = new System.Drawing.Point(303, 165);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 13);
             this.lblEmail.TabIndex = 14;
@@ -157,7 +157,7 @@
             // 
             // txt_Num_Documento
             // 
-            this.txt_Num_Documento.Location = new System.Drawing.Point(207, 133);
+            this.txt_Num_Documento.Location = new System.Drawing.Point(306, 133);
             this.txt_Num_Documento.Name = "txt_Num_Documento";
             this.txt_Num_Documento.Size = new System.Drawing.Size(100, 20);
             this.txt_Num_Documento.TabIndex = 11;
@@ -165,7 +165,7 @@
             // lbl_Num_Documento
             // 
             this.lbl_Num_Documento.AutoSize = true;
-            this.lbl_Num_Documento.Location = new System.Drawing.Point(203, 114);
+            this.lbl_Num_Documento.Location = new System.Drawing.Point(302, 114);
             this.lbl_Num_Documento.Name = "lbl_Num_Documento";
             this.lbl_Num_Documento.Size = new System.Drawing.Size(146, 13);
             this.lbl_Num_Documento.TabIndex = 10;
@@ -178,10 +178,10 @@
             this.cmb_Tipo_Documento.Items.AddRange(new object[] {
             "DNI",
             "PASAPORTE",
-            "CARNET DE EXTRANGERIA"});
+            "CARNET DE EXTRANJERIA"});
             this.cmb_Tipo_Documento.Location = new System.Drawing.Point(25, 132);
             this.cmb_Tipo_Documento.Name = "cmb_Tipo_Documento";
-            this.cmb_Tipo_Documento.Size = new System.Drawing.Size(121, 21);
+            this.cmb_Tipo_Documento.Size = new System.Drawing.Size(192, 21);
             this.cmb_Tipo_Documento.TabIndex = 9;
             // 
             // lbl_Tipo_Documento
@@ -196,6 +196,7 @@
             // txtMaterno
             // 
             this.txtMaterno.Location = new System.Drawing.Point(385, 78);
+            this.txtMaterno.MaxLength = 50;
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.Size = new System.Drawing.Size(152, 20);
             this.txtMaterno.TabIndex = 7;
@@ -212,6 +213,7 @@
             // txtPaterno
             // 
             this.txtPaterno.Location = new System.Drawing.Point(207, 78);
+            this.txtPaterno.MaxLength = 50;
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.Size = new System.Drawing.Size(152, 20);
             this.txtPaterno.TabIndex = 5;
@@ -228,6 +230,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(25, 78);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(152, 20);
             this.txtNombre.TabIndex = 3;
@@ -244,6 +247,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(77, 22);
+            this.txtCodigo.MaxLength = 10;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 1;
@@ -299,39 +303,6 @@
             this.dgvUsuario.TabIndex = 4;
             this.dgvUsuario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentDoubleClick);
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(12, 499);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(119, 23);
-            this.btnGuardar.TabIndex = 5;
-            this.btnGuardar.Text = "GUARDAR DATOS";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(148, 499);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(119, 23);
-            this.btnCargar.TabIndex = 6;
-            this.btnCargar.Text = "CARGAR DATOS";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(563, 499);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "SALIR";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // epUsuario
-            // 
-            this.epUsuario.ContainerControl = this;
-            // 
             // colCodigo
             // 
             this.colCodigo.HeaderText = "Codigo";
@@ -385,6 +356,40 @@
             this.colDireccion.HeaderText = "Direccion";
             this.colDireccion.Name = "colDireccion";
             this.colDireccion.ReadOnly = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(12, 499);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(119, 23);
+            this.btnGuardar.TabIndex = 5;
+            this.btnGuardar.Text = "GUARDAR DATOS";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(148, 499);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(119, 23);
+            this.btnCargar.TabIndex = 6;
+            this.btnCargar.Text = "CARGAR DATOS";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(563, 499);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // epUsuario
+            // 
+            this.epUsuario.ContainerControl = this;
             // 
             // Form1
             // 
