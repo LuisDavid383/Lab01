@@ -142,6 +142,7 @@
             // txtCelular
             // 
             this.txtCelular.Location = new System.Drawing.Point(25, 181);
+            this.txtCelular.MaxLength = 9;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 20);
             this.txtCelular.TabIndex = 13;

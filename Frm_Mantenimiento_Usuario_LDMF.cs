@@ -78,7 +78,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtNombre, "");
 
             //VERIFICAR QUE SE INGRESEN SOLO VALORES ALFABETICOS
-            if (!Regex.IsMatch(txtNombre.Text, "^[A-Za-z ]*$"))
+            if (!Regex.IsMatch(txtNombre.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$"))
             {
                 epUsuario.SetError(txtNombre, "Solo puede ingresar valores alfabeticos");
                 txtNombre.Focus();
@@ -99,7 +99,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtPaterno, "");
 
             //VERIFICAR QUE SE INGRESE SOLO VALORES ALFANUMERICOS
-            if (!Regex.IsMatch(txtPaterno.Text, "^[A-Za-z]*$"))
+            if (!Regex.IsMatch(txtPaterno.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ]*$"))
             {
                 epUsuario.SetError(txtPaterno, "Solo puede ingresar valores alfabeticos");
                 txtPaterno.Focus();
@@ -120,10 +120,10 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtMaterno, "");
 
             //VERIFICAR QUE SE INGRESE SOLO VALORES ALFANUMERICOS
-            if (!Regex.IsMatch(txtMaterno.Text, "^[A-Za-z]*$"))
+            if (!Regex.IsMatch(txtMaterno.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ]*$"))
             {
                 epUsuario.SetError(txtMaterno, "Solo puede ingresar valores alfabeticos");
-                txtPaterno.Focus();
+                txtMaterno.Focus();
                 return;
             }
             epUsuario.SetError(txtMaterno, "");
@@ -155,7 +155,9 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txt_Num_Documento, "");
 
 
-            //Verificar que el celular no este vacio
+
+            //VERIFICAR EL TEXBOX CELULAR
+            //VERIFICAR QUE EL CAMPO CELULAR NO ESTE VACIO
             if (string.IsNullOrEmpty(txtCelular.Text))
             {
                 epUsuario.SetError(txtCelular, "Debe ingresar el número de celular");
@@ -164,8 +166,19 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             }
             epUsuario.SetError(txtCelular, "");
 
+            //VERIFICAR QUE SE INGRESEN SOLO VALORES NUMERICOS
+            if (!Regex.IsMatch(txtCelular.Text, "^[0-9]*$"))
+            {
+                epUsuario.SetError(txtCelular, "Solo puede ingresar valores numericos");
+                txtCelular.Focus();
+                return;
+            }
+            epUsuario.SetError(txtCelular, "");
 
-            //Verificar que el email no este vacio
+
+
+            //VERIFICAR EL TEXBOX EMAIL
+            //VERIFICAR QUE EL CAMPO EMAIL NO ESTE VACIO
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 epUsuario.SetError(txtEmail, "Debe ingresar el email");
@@ -173,6 +186,17 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
                 return;
             }
             epUsuario.SetError(txtEmail, "");
+
+            //VERIFICAR QUE SE INGRESA SOLO CORREOS ELECTRONICOS
+            if (!Regex.IsMatch(txtCelular.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
+                epUsuario.SetError(txtEmail, "Solo puede ingresar correos electronicos");
+                txtEmail.Focus();
+                return;
+            }
+            epUsuario.SetError(txtEmail, "");
+
+
 
             //Verificar que la direccion no este vacio
             if (string.IsNullOrEmpty(txtDireccion.Text))

@@ -16,7 +16,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Login_LDMF());
+            Application.Run(new Frm_Mantenimiento_Usuario_LDMF());
         }
     }
 }
