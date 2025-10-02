@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
+namespace PG02_TRABADIC_LUIS_MOSQUITO
 {
     public partial class Frm_Login_LDMF : Form
     {

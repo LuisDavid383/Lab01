@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
+namespace PG02_TRABADIC_LUIS_MOSQUITO
 {
     internal static class Program
     {

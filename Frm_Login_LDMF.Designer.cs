@@ -1,4 +1,4 @@
-﻿namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
+﻿namespace PG02_TRABADIC_LUIS_MOSQUITO
 {
     partial class Frm_Login_LDMF
     {

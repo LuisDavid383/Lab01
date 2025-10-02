@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO.Clases
+namespace PG02_TRABADIC_LUIS_MOSQUITO.Clases
 {
     internal class clsUsuario_LDMF
     {
