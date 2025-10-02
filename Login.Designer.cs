@@ -52,9 +52,10 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Location = new System.Drawing.Point(133, 153);
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.Location = new System.Drawing.Point(143, 141);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 23);
+            this.btnsalir.Size = new System.Drawing.Size(81, 35);
             this.btnsalir.TabIndex = 38;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@
             // 
             // btnacceder
             // 
-            this.btnacceder.Location = new System.Drawing.Point(33, 153);
+            this.btnacceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnacceder.Location = new System.Drawing.Point(16, 141);
             this.btnacceder.Name = "btnacceder";
-            this.btnacceder.Size = new System.Drawing.Size(75, 23);
+            this.btnacceder.Size = new System.Drawing.Size(93, 35);
             this.btnacceder.TabIndex = 37;
             this.btnacceder.Text = "Acceder";
             this.btnacceder.UseVisualStyleBackColor = true;
@@ -72,46 +74,50 @@
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(108, 96);
+            this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpassword.Location = new System.Drawing.Point(124, 93);
             this.txtpassword.MaxLength = 10;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(100, 20);
+            this.txtpassword.Size = new System.Drawing.Size(100, 29);
             this.txtpassword.TabIndex = 36;
             // 
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.Location = new System.Drawing.Point(30, 103);
+            this.lblpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpassword.Location = new System.Drawing.Point(12, 98);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(61, 13);
+            this.lblpassword.Size = new System.Drawing.Size(106, 24);
             this.lblpassword.TabIndex = 35;
             this.lblpassword.Text = "Contraseña";
             // 
             // lblusuario
             // 
             this.lblusuario.AutoSize = true;
-            this.lblusuario.Location = new System.Drawing.Point(30, 73);
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(12, 63);
             this.lblusuario.Name = "lblusuario";
-            this.lblusuario.Size = new System.Drawing.Size(43, 13);
+            this.lblusuario.Size = new System.Drawing.Size(74, 24);
             this.lblusuario.TabIndex = 34;
             this.lblusuario.Text = "Usuario";
             // 
             // txtusuario
             // 
-            this.txtusuario.Location = new System.Drawing.Point(108, 70);
+            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.Location = new System.Drawing.Point(124, 58);
             this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(100, 20);
+            this.txtusuario.Size = new System.Drawing.Size(100, 29);
             this.txtusuario.TabIndex = 33;
             // 
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.Location = new System.Drawing.Point(75, 14);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(80, 24);
+            this.lbltitulo.Size = new System.Drawing.Size(98, 29);
             this.lbltitulo.TabIndex = 32;
             this.lbltitulo.Text = "Acceso";
             // 
@@ -119,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 212);
+            this.ClientSize = new System.Drawing.Size(429, 205);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnacceder);
