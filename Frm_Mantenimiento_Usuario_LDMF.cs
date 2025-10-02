@@ -14,14 +14,14 @@ using PG02__LAB01_FICHEROS_LUIS_MOSQUITO.Clases;
 
 namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
 {
-    public partial class Form1 : Form
+    public partial class Frm_Mantenimiento_Usuario_LDMF : Form
     {
         //Instanciar la clase
-        clsUsuario ObjUsuario = new clsUsuario();
+        clsUsuario_LDMF ObjUsuario = new clsUsuario_LDMF();
 
         ArrayList aDatosUsuario = new ArrayList();
 
-        public Form1()
+        public Frm_Mantenimiento_Usuario_LDMF()
         {
             InitializeComponent();
             txt_Num_Documento.Enabled = false;
@@ -140,10 +140,7 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             }
             epUsuario.SetError(cmb_Tipo_Documento, "");
 
-            if (cmb_Tipo_Documento.SelectedIndex != -1)
-            {
-                txt_Num_Documento.Enabled = true;
-            }
+            
 
 
 
@@ -226,7 +223,7 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
             TextWriter escribir = new StreamWriter("Usuario.txt");
             escribir.Close();
 
-            foreach (clsUsuario usuario in aDatosUsuario)
+            foreach (clsUsuario_LDMF usuario in aDatosUsuario)
             {
                 StreamWriter agregarusuario = File.AppendText("Usuario.txt");
 
@@ -294,6 +291,18 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmb_Tipo_Documento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_Tipo_Documento.SelectedIndex != -1)
+            {
+                txt_Num_Documento.Enabled = true;
+            }
+            else
+            {
+                txt_Num_Documento.Enabled = false;
+            }
         }
     }
 }

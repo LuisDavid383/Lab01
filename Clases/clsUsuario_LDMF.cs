@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO.Clases
 {
-    internal class clsUsuario
+    internal class clsUsuario_LDMF
     {
         public string codigo { get; set; }
         public string nombre { get; set; }

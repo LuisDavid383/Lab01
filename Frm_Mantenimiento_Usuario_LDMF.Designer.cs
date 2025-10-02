@@ -1,6 +1,6 @@
 ﻿namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
 {
-    partial class Form1
+    partial class Frm_Mantenimiento_Usuario_LDMF
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -183,6 +183,7 @@
             this.cmb_Tipo_Documento.Name = "cmb_Tipo_Documento";
             this.cmb_Tipo_Documento.Size = new System.Drawing.Size(192, 21);
             this.cmb_Tipo_Documento.TabIndex = 9;
+            this.cmb_Tipo_Documento.SelectedIndexChanged += new System.EventHandler(this.cmb_Tipo_Documento_SelectedIndexChanged);
             // 
             // lbl_Tipo_Documento
             // 
@@ -391,7 +392,7 @@
             // 
             this.epUsuario.ContainerControl = this;
             // 
-            // Form1
+            // Frm_Mantenimiento_Usuario_LDMF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -404,7 +405,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gpbDatos);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "Form1";
+            this.Name = "Frm_Mantenimiento_Usuario_LDMF";
             this.Text = "Mantenimiento de Usuarios";
             this.gpbDatos.ResumeLayout(false);
             this.gpbDatos.PerformLayout();

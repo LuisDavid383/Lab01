@@ -1,6 +1,6 @@
 ﻿namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
 {
-    partial class Login
+    partial class Frm_Login_LDMF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login_LDMF));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnacceder = new System.Windows.Forms.Button();

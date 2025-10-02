@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
 {
-    public partial class Login : Form
+    public partial class Frm_Login_LDMF : Form
     {
-        public Login()
+        public Frm_Login_LDMF()
         {
             InitializeComponent();
         }
@@ -28,8 +28,8 @@ namespace PG02__LAB01_FICHEROS_LUIS_MOSQUITO
                 string a = txtusuario.Text;
                 string b = txtpassword.Text;
 
-                Man mDI_Principal = new Man();
-                mDI_Principal.Show();
+                Frm_Mantenimiento_Usuario_LDMF Usuario = new Frm_Mantenimiento_Usuario_LDMF();
+                Usuario.Show();
 
             }
             else
