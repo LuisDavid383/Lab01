@@ -16,9 +16,10 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
 {
     public partial class Frm_Mantenimiento_Usuario_LDMF : Form
     {
-        //Instanciar la clase
+        //INSTANCIAR LA CLASE USUARIO
         clsUsuario_LDMF ObjUsuario = new clsUsuario_LDMF();
 
+        //CREAR UN ARRAY LIST DONDE GUARDAR Y ALMACENAR LOS DATOS
         ArrayList aDatosUsuario = new ArrayList();
 
         public Frm_Mantenimiento_Usuario_LDMF()
@@ -99,7 +100,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtPaterno, "");
 
             //VERIFICAR QUE SE INGRESE SOLO VALORES ALFANUMERICOS
-            if (!Regex.IsMatch(txtPaterno.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ]*$"))
+            if (!Regex.IsMatch(txtPaterno.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$"))
             {
                 epUsuario.SetError(txtPaterno, "Solo puede ingresar valores alfabeticos");
                 txtPaterno.Focus();
@@ -120,7 +121,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtMaterno, "");
 
             //VERIFICAR QUE SE INGRESE SOLO VALORES ALFANUMERICOS
-            if (!Regex.IsMatch(txtMaterno.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ]*$"))
+            if (!Regex.IsMatch(txtMaterno.Text, "^[A-Za-záéíóúÁÉÍÓÚñÑ ]*$"))
             {
                 epUsuario.SetError(txtMaterno, "Solo puede ingresar valores alfabeticos");
                 txtMaterno.Focus();
@@ -140,8 +141,6 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             }
             epUsuario.SetError(cmb_Tipo_Documento, "");
 
-            
-
 
 
             //VERIFICAR EL TEXTBOX NUMERO DE DOCUMENTO
@@ -153,6 +152,30 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
                 return;
             }
             epUsuario.SetError(txt_Num_Documento, "");
+            
+            //VERIFICAR QUE SE INGRESEN LOS VALORES CORRECTOS SEGUN LA OPCION
+            string seleccion = cmb_Tipo_Documento.SelectedItem.ToString();
+
+            if (seleccion == "Pasaporte")
+            {
+                if (!Regex.IsMatch(txt_Num_Documento.Text, "^[A-Za-z0-9]*$"))
+                {
+                    epUsuario.SetError(txt_Num_Documento, "Solo puede ingresar valores alfanumericos");
+                    txt_Num_Documento.Focus();
+                    return;
+                }
+                epUsuario.SetError(txt_Num_Documento, "");
+            }
+            else if (seleccion == "DNI" || seleccion == "CARNET DE EXTRANJERIA")
+            {
+                if (!Regex.IsMatch(txt_Num_Documento.Text, "^[0-9]*$"))
+                {
+                    epUsuario.SetError(txt_Num_Documento, "Solo puede ingresar valores numericos");
+                    txt_Num_Documento.Focus();
+                    return;
+                }
+                epUsuario.SetError(txt_Num_Documento, "");
+            }
 
 
 
@@ -188,7 +211,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtEmail, "");
 
             //VERIFICAR QUE SE INGRESA SOLO CORREOS ELECTRONICOS
-            if (!Regex.IsMatch(txtCelular.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            if (!Regex.IsMatch(txtEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 epUsuario.SetError(txtEmail, "Solo puede ingresar correos electronicos");
                 txtEmail.Focus();
@@ -198,7 +221,8 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
 
 
 
-            //Verificar que la direccion no este vacio
+            //VERIFICAR EL TEXTBOX DIRECCION
+            //VERIFICAR QUE EL CAMPO DIRECCION NO ESTE VACIO
             if (string.IsNullOrEmpty(txtDireccion.Text))
             {
                 epUsuario.SetError(txtDireccion, "Debe ingresar la dirección");
@@ -208,6 +232,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             epUsuario.SetError(txtDireccion, "");
 
 
+            //INGRESAR LOS DATOS A LOS OBJETOS DE LA CLASE
             ObjUsuario.codigo = txtCodigo.Text;
             ObjUsuario.nombre = txtNombre.Text;
             ObjUsuario.apellidoPaterno = txtPaterno.Text;
@@ -218,13 +243,24 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             ObjUsuario.email = txtEmail.Text;
             ObjUsuario.direccion = txtDireccion.Text;
 
+            //INGRESAR EN UN ARRAYLIST LOS DATOS INGRESADOR DE LA CLASE
             aDatosUsuario.Add(ObjUsuario);
 
-            dgvUsuario.Rows.Add(ObjUsuario.codigo, ObjUsuario.nombre, ObjUsuario.apellidoPaterno, ObjUsuario.apellidoMaterno, ObjUsuario.tipo_documento, ObjUsuario.num_documento, ObjUsuario.celular, ObjUsuario.email, ObjUsuario.direccion);
+            //IMPRIMIR LOS DATOS EN UN DATAWGRIDVIEW
+            dgvUsuario.Rows.Add(ObjUsuario.codigo,
+                                ObjUsuario.nombre,
+                                ObjUsuario.apellidoPaterno,
+                                ObjUsuario.apellidoMaterno,
+                                ObjUsuario.tipo_documento,
+                                ObjUsuario.num_documento,
+                                ObjUsuario.celular,
+                                ObjUsuario.email,
+                                ObjUsuario.direccion);
 
             mtd_Limpiar_Campos();
         }
 
+        //METODO PARA LIMPIAR LOS DATOS INGRESADOS EN LOS TEXBOX
         private void mtd_Limpiar_Campos()
         {
             txtCodigo.Text = string.Empty;
@@ -319,9 +355,11 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
 
         private void cmb_Tipo_Documento_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //VERIFICAR SI SE SELECCIONO UNA OPCION PARA HABILITAR EL TEXBOX NUMERO DE DOCUMENTO
             if (cmb_Tipo_Documento.SelectedIndex != -1)
             {
                 txt_Num_Documento.Enabled = true;
+                txt_Num_Documento.Text = string.Empty;
             }
             else
             {

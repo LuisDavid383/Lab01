@@ -53,6 +53,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Mantenimiento_Categoria_LDMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Mantenimiento_Categoria_LDMF.Designer.cs">
+      <DependentUpon>Frm_Mantenimiento_Categoria_LDMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Mantenimiento_Cliente_LDMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Mantenimiento_Cliente_LDMF.Designer.cs">
+      <DependentUpon>Frm_Mantenimiento_Cliente_LDMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Mantenimiento_Producto_LDMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Mantenimiento_Producto_LDMF.Designer.cs">
+      <DependentUpon>Frm_Mantenimiento_Producto_LDMF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Mantenimiento_Usuario_LDMF.cs">
       <SubType>Form</SubType>
     </Compile>
