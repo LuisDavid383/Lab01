@@ -20,7 +20,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
         clsUsuario_LDMF ObjUsuario = new clsUsuario_LDMF();
 
         //CREAR UN ARRAY LIST DONDE GUARDAR Y ALMACENAR LOS DATOS
-        ArrayList aDatosUsuario = new ArrayList();
+        //ArrayList aDatosUsuario = new ArrayList();
 
         public Frm_Mantenimiento_Usuario_LDMF()
         {
@@ -244,7 +244,8 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
             ObjUsuario.direccion = txtDireccion.Text;
 
             //INGRESAR EN UN ARRAYLIST LOS DATOS INGRESADOR DE LA CLASE
-            aDatosUsuario.Add(ObjUsuario);
+
+            clsDatosGlobales_LDMF.Usuario.Add(ObjUsuario);
 
             //IMPRIMIR LOS DATOS EN UN DATAWGRIDVIEW
             dgvUsuario.Rows.Add(ObjUsuario.codigo,
@@ -280,15 +281,18 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
 
         private void mtd_Guardar_Datos()
         {
-            TextWriter escribir = new StreamWriter("Usuario.txt");
-            escribir.Close();
-
-            foreach (clsUsuario_LDMF usuario in aDatosUsuario)
+            using (StreamWriter sw = new StreamWriter("Usuario.txt"))
             {
-                StreamWriter agregarusuario = File.AppendText("Usuario.txt");
+                foreach (DataGridViewRow row in dgvUsuario.Rows)
+                {
+                    string[] valores = new string[row.Cells.Count];
 
-                agregarusuario.WriteLine(usuario.codigo + "|" + usuario.nombre + "|" + usuario.apellidoPaterno + "|" + usuario.apellidoMaterno);
-                agregarusuario.Close();
+                    for (int i = 0; i < row.Cells.Count; i++)
+                    {
+                        valores[i] = row.Cells[i].Value?.ToString() ?? "";
+                    }
+                    sw.WriteLine(string.Join("|", valores));
+                }
             }
         }
 
@@ -335,7 +339,7 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO
                     ObjUsuario.apellidoMaterno = apellidopaterno;
 
                     //agregar al array
-                    aDatosUsuario.Add(ObjUsuario);
+                    clsDatosGlobales_LDMF.Usuario.Add(ObjUsuario);
 
                     dgvUsuario.Rows.Add(ObjUsuario.codigo, ObjUsuario.nombre, ObjUsuario.apellidoPaterno, ObjUsuario.apellidoMaterno);
                 }

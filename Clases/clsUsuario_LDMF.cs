@@ -18,9 +18,9 @@ namespace PG02_TRABADIC_LUIS_MOSQUITO.Clases
         public string email { get; set; }
         public string direccion { get; set; }
 
-        public string mtdCadena(string codigo, string nombre, string apellidopaterno, string apellidomaterno)
-        {
-            return codigo + "|" + nombre + "|" + apellidopaterno + "|" + apellidomaterno + "|" + tipo_documento + "|" + num_documento + "|" + celular + "|" + email + "|" + direccion;
-        }
+        //public string mtdCadena(string codigo, string nombre, string apellidopaterno, string apellidomaterno)
+        //{
+        //    return codigo + "|" + nombre + "|" + apellidopaterno + "|" + apellidomaterno + "|" + tipo_documento + "|" + num_documento + "|" + celular + "|" + email + "|" + direccion;
+        //}
     }
 }
